@@ -9,6 +9,7 @@ let cnt = 0;
 app.use(express.static(path.join(__dirname, 'html')));
 
 var PORT = process.env.PORT || 8080;
+var env = process.env.ENV || 'dev'
 
 app.get("/", async(req,res,next) => {
   res.render('index');
@@ -16,7 +17,7 @@ app.get("/", async(req,res,next) => {
 
 app.get("/hello", async(req, res) => {
 	try {
-		res.end(`Node Hello on ${os.hostname()}:${PORT} - ${cnt++} \n`);
+		res.end(`Node Hello on ${os.hostname()}:${PORT} - ${cnt++} - ${env} \n `);
 	} catch (err) {
 		console.error(err.message);
 	}  
