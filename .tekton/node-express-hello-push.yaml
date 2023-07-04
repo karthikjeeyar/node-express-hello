@@ -22,7 +22,7 @@ spec:
   - name: git-url
     value: '{{repo_url}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/karthik-jk-tenant/node-express-hello/node-express-hello:{{revision}}
+    value: quay.io/redhat-user-workloads-stage/karthik-jk-tenant/node-express-hello/node-express-hello:{{revision}}
   - name: path-context
     value: .
   - name: revision
